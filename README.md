@@ -13,6 +13,8 @@ An Cordova / Ionic / AngularJS / Browserify Mobile App boilerplate for creating 
 ### Install Cordova
 ```bash
 npm i -g cordova
+npm i -g ios-sim
+brew install imagemagick
 ```
 
 ### Clone the repo
