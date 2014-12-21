@@ -18,24 +18,17 @@
     <preference name="SplashScreen" value="splash" />
     <preference name="SplashScreenDelay" value="10000" />
 
+    <!-- for iOS -->
     <feature name="StatusBar">
       <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
-
-    <!-- for iOS -->
     <feature name="Keyboard">
         <param name="ios-package" value="IonicKeyboard" onload="true" />
-    </feature>
-    <feature name="Calendar">
-        <param name="ios-package" value="Calendar" />
     </feature>
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
     </feature>
     <!-- for Android -->
-    <feature name="Calendar">
-      <param name="android-package" value="nl.xservices.plugins.Calendar" />
-    </feature>
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.InAppBrowser" />
     </feature>

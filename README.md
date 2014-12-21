@@ -10,7 +10,7 @@ An Cordova / Ionic / AngularJS / Browserify Mobile App boilerplate for creating 
 - [lodash](http://lodash.com)
 - [angular](http://angularjs.org)
 
-### Install Cordova
+### Install global deps
 ```bash
 npm i -g cordova
 npm i -g ios-sim
@@ -88,4 +88,5 @@ npm run clean
 - add BDD tests with protractor and cucumber
 - add vesioning support for config.xml
 - create android release script
+- reduce node packages
 - ....
