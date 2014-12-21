@@ -1,5 +1,5 @@
 {
-  "name": "cordova-mobile-app",
+  "name": "cordova-mobile-boilerplate",
   "version": "1.0.0",
   "description": "Cordova-Ionic-Browserify Mobile app boilerplate",
   "author": "Dragos Oancea <oancea.dragosh@gmail.com> (http://dragosh.me)",
@@ -7,9 +7,9 @@
   "homepage": "https://github.com/LeZuse/node-flatten-deps",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dragosh/cordova-mobile-bp"
+    "url": "https://github.com/dragosh/cordova-mobile-boilerplate"
   },
-  "bugs": "https://github.com/dragosh/cordova-mobile-bp/issues",
+  "bugs": "https://github.com/dragosh/cordova-mobile-boilerplate/issues",
   "dependencies": {
     "lodash": "~2.4.1",
     "angular": "~1.3.6"
