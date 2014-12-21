@@ -1,0 +1,10 @@
+node_modules/
+__tmp/
+*.log
+platforms/*
+plugins/*
+www/*
+app/lib
+app/scripts/index.js
+app/styles/base.css
+

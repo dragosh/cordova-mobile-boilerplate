@@ -1,0 +1,81 @@
+{
+  "name": "cordova-mobile-app",
+  "version": "0.0.0",
+  "description": "Cordova-Ionic-Browserify Mobile app boilerplate",
+  "author": "Dragos Oancea <oancea.dragosh@gmail.com> (http://dragosh.me)",
+  "license": "MIT",
+  "homepage": "https://github.com/LeZuse/node-flatten-deps",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragosh/cordova-mobile-bp"
+  },
+  "bugs": "https://github.com/dragosh/cordova-mobile-bp/issues",
+  "dependencies": {
+    "lodash": "~2.4.1",
+    "angular": "~1.3.6"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.3.8",
+    "brfs": "^1.2.0",
+    "browser-sync": "~1.3.5",
+    "browserify": "^7.0.3",
+    "browserify-shim": "^3.8.1",
+    "cordova-gen": "~1.0.6",
+    "del": "~1.1.0",
+    "flatten-deps": "^0.2.2",
+    "gulp": "^3.8.10",
+    "gulp-bower": "0.0.7",
+    "gulp-bower-src": "^0.1.0",
+    "gulp-browserify": "^0.5.0",
+    "gulp-changed": "~0.4.0",
+    "gulp-concat": "~2.2.0",
+    "gulp-eslint": "^0.2.0",
+    "gulp-imagemin": "~0.6.0",
+    "gulp-load-plugins": "~0.8.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-minify-html": "^0.1.7",
+    "gulp-ng-annotate": "~0.3.0",
+    "gulp-ng-html2js": "~0.1.6",
+    "gulp-notify": "~2.0.0",
+    "gulp-release-tasks": "0.0.3",
+    "gulp-sass": "^0.7.1",
+    "gulp-uglify": "~1.0.2",
+    "gulp-util": "~3.0.1",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.28",
+    "karma-browserify": "^1.0.1",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "^0.3.2",
+    "karma-osx-reporter": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "markdown-live": "^1.0.6",
+    "parallelshell": "^1.0.0",
+    "pre-commit": "0.0.9",
+    "run-sequence": "~1.0.2"
+  },
+  "config": {},
+  "scripts": {
+    "postinstall": "gulp bower",
+    "test": "gulp lint && gulp test",
+    "test:watch": "gulp test:watch",
+    "tag": "gulp tag",
+    "bump": "gulp bump",
+    "pre-commit": [
+      "test"
+    ],
+    "prebuild": "npm test",
+    "build": "gulp build",
+    "create": "npm run build && ./scripts/create.sh && npm run icons",
+    "preclean": "gulp clean",
+    "md": "mdlive",
+    "clean": "./scripts/clean.sh",
+    "start": "parallelshell 'gulp start' 'gulp test:watch'",
+    "ios": "npm run build && cordova build ios && cordova emulate ios",
+    "android": "npm run build && cordova build android && cordova run android",
+    "icons": "cordova-gen ./app/icon.png '#ffffff'"
+  },
+  "browserify-shim": {
+    "angular": "global:angular"
+  }
+}
