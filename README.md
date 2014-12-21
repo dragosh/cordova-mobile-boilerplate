@@ -69,7 +69,7 @@ npm run bump -- --major
 
 tagging
 ```bash
-npm run tag
+gulp tag --major
 ```
 
 ### Writing markdown files
