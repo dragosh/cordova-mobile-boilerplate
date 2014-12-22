@@ -4,6 +4,8 @@ __tmp/
 platforms/*
 plugins/*
 www/*
+certs/*
+!**/.gitignore
 app/lib
 app/scripts/index.js
 app/styles/base.css
