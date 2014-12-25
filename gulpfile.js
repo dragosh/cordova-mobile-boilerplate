@@ -106,7 +106,11 @@ gulp.task('build:scripts', ['compile:scripts'], function(done) {
     .pipe(g.uglify())
     .pipe(gulp.dest(paths.www + '/lib'));
 });
-
+gulp.task('config:version', function(done) {
+  gulp.src('config.xml')
+    .pipe(g.replace(/version="(.*?)"/gi, 'version="'+ packageJson.version +'"'))
+    .pipe(gulp.dest('./'));
+});
 // Styles
 gulp.task('build:styles', ['compile:styles'], function(done) {
 

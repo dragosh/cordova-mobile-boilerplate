@@ -86,7 +86,7 @@ npm run clean
 
 ## TODO
 - add BDD tests with protractor and cucumber
-- add vesioning support for config.xml
-- create android release script
+- clean ngCordova modules
 - reduce node packages
+- create android release script
 - ....

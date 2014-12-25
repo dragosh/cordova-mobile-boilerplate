@@ -38,6 +38,7 @@
     "gulp-ng-html2js": "~0.1.6",
     "gulp-notify": "~2.0.0",
     "gulp-release-tasks": "0.0.3",
+    "gulp-replace": "^0.5.0",
     "gulp-sass": "^0.7.1",
     "gulp-uglify": "~1.0.2",
     "gulp-util": "~3.0.1",
@@ -59,6 +60,8 @@
     "postinstall": "gulp bower",
     "test": "gulp lint && gulp test",
     "test:watch": "gulp test:watch",
+    "postbump": "gulp config:version",
+    "posttag": "gulp config:version",
     "tag": "gulp tag",
     "bump": "gulp bump",
     "pre-commit": [
