@@ -41,6 +41,7 @@ gulp.task('bower', function() {
 gulp.task('compile:scripts', [], function() {
   return gulp.src(paths.scripts + '/src/index.js') //only index
     .pipe(g.browserify())
+    .on('error', g.notify.onError())
     .pipe(g.ngAnnotate())
     .pipe(gulp.dest(paths.scripts));
 });
@@ -188,7 +189,7 @@ gulp.task('browser:dev', function() {
     server: {
       baseDir: [src]
     },
-    open: true
+    open: false
   });
 });
 

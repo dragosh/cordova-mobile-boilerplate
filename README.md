@@ -26,16 +26,8 @@ npm i
 
 ### Creating platform and plugins
 default platforms iOS & Android
-- com.ionic.keyboard
-- console
 - device
 - dialogs
-- inappbrowser
-- network-information
-- splashscreen
-- statusbar
-- vibration
-- camera
 
 ```bash
 npm run create
@@ -86,7 +78,6 @@ npm run clean
 
 ## TODO
 - add BDD tests with protractor and cucumber
-- clean ngCordova modules
 - reduce node packages
 - create android release script
 - ....

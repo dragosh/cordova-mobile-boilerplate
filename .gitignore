@@ -10,3 +10,4 @@ app/lib
 app/scripts/index.js
 app/styles/base.css
 
+*.sublime-*

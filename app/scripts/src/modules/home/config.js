@@ -2,8 +2,8 @@
 module.exports = function config ($stateProvider) {
   $stateProvider
     .state('home', {
-      url: '/home',
+      url: '/',
       templateUrl: '/scripts/src/modules/home/templates/index.ng.html',
-      controller: 'HomeCtrl as homeCtrl'
+      controller: 'HomeCtrl as home'
     });
 };

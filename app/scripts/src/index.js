@@ -8,23 +8,21 @@ var base = require('./base');
 
 module.name = 'app';
 // Cordova modules
-var ngCordova = window.App.isDevice
-        ? require('../ng-cordova/module')
-        : require('../ng-cordova/module-mocks');
+var ngCordova = window.isDevice ? require('./ng-cordova/index') : require('./ng-cordova/mocks');
 
 module.dependencies = [
   'ionic',
   'app.templates',
   require('./modules/core/index').name,
-  require('./modules/home/index').name
-  // ngCordova.name
+  require('./modules/home/index').name,
+  ngCordova.name
 ];
-
-
 // Main App
 base.createModule(module.name, module.dependencies)
   .config(require('./config'))
   .run(require('./run'));
 
-// Attach to Document
-base.bootstrap(module.name);
+
+window.ionic.Platform.ready(function() {
+  base.bootstrap(module.name);
+});
